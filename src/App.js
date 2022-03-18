@@ -42,35 +42,38 @@ function App() {
           cidade: '',
           uf: '',
         }}
-        render={({ setFieldValue }) => (
+        render={({ setFieldValue, errors }) => (
           <Form>
             <div className="form-control-group">
-              <label>Cep</label>
-              <Field name="cep" type="text" onBlur={(ev) => onBlurCep(ev, setFieldValue)} />
+              <label htmlFor="cep">Cep</label>
+              <Field id="cep" class="form-control" name="cep" type="text" onBlur={(ev) => onBlurCep(ev, setFieldValue)} />
+              {errors.cep && (
+                <div class="text-danger">{errors.cep}</div>
+              )}
             </div>
-            <div className="form-control-group">
+            <div className="form-control-group ">
               <label>Logradouro</label>
-              <Field name="logradouro" type="text" />
+              <Field class="form-control" name="logradouro" type="text" />
             </div>
             <div className="form-control-group">
               <label>Número</label>
-              <Field name="numero" type="text" />
+              <Field class="form-control" name="numero" type="text" />
             </div>
             <div className="form-control-group">
               <label>Complemento</label>
-              <Field name="complemento" type="text" />
+              <Field class="form-control" name="complemento" type="text" />
             </div>
             <div className="form-control-group">
               <label>Bairro</label>
-              <Field name="bairro" type="text" />
+              <Field class="form-control" name="bairro" type="text" />
             </div>
             <div className="form-control-group">
               <label>Cidade</label>
-              <Field name="cidade" type="text" />
+              <Field class="form-control" name="cidade" type="text" />
             </div>
             <div className="form-control-group">
               <label>Estado</label>
-              <Field name="uf" type="text" />
+              <Field class="form-control" name="uf" type="text" />
             </div>
           </Form>
         )}
