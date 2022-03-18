@@ -1,14 +1,19 @@
-.App form {
-    width: 300px;
-    margin: 80px auto;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  }
+
+label {
+  font-size: .9rem;
 }
 
-.form-control-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+input.form-control, input.form-control:focus {
+  background: #F0F0FF;
 }
 
-.form-control-group label{
-    margin-bottom: 5px;
+.error {
+  position: absolute;
+  color: red;
+  font-size: .7rem;
 }
